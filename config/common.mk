@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Basic \
     LiveWallpapersPicker \
+    Eleven \
     LockClock \
     PhaseBeam \
     WallpaperPicker 
