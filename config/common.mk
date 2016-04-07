@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/turbo/prebuilt/common/app/AdAway/AdAway.apk:system/app/AdAway/AdAway.apk
 
+# ViPER4Android
+PRODUCT_COPY_FILES += \
+    vendor/turbo/prebuilt/common/app/ViPER4Android.apk:system/app/ViPER4Android/ViPER4Android.apk
+
 # Hide BitSyko Layers Manager app icon from launcher
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.layers.noIcon=noIcon
@@ -110,9 +114,10 @@ PRODUCT_COPY_FILES += \
     vendor/turbo/prebuilt/common/supersu/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/turbo/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
-# ViPER4Android
-# PRODUCT_COPY_FILES += \
-#     vendor/turbo/prebuilt/common/app/ViPER4Android.apk:system/app/ViPER4Android/ViPER4Android.apk
+# Viper4Android etxra files
+PRODUCT_COPY_FILES += \
+    vendor/turbo/prebuilt/common/addon.d/91-v4a.sh:system/addon.d/91-v4a.sh \
+    vendor/turbo/prebuilt/common/etc/v4a.zip:system/addon.d/v4a.zip
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -185,14 +190,14 @@ endif
 
 # Versioning System
 PRODUCT_VERSION_MAJOR = 3
-PRODUCT_VERSION_MINOR = 2
+PRODUCT_VERSION_MINOR = 3
 PRODUCT_VERSION_MAINTENANCE = 0.1
 ifdef TURBO_BUILD_EXTRA
     TURBO_POSTFIX := -$(TURBO_BUILD_EXTRA)
 endif
 ifndef TURBO_BUILD_TYPE
-    TURBO_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
+    TURBO_BUILD_TYPE := OFFICIAL
+    PLATFORM_VERSION_CODENAME := OFFICIAL
 endif
 ifndef TURBO_BUILD_TYPE
     TURBO_BUILD_TYPE := OFFICIAL
